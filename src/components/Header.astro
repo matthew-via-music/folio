@@ -1,0 +1,50 @@
+---
+import github from "../images/github.svg"
+// import twitter from "../images/twitter.svg"
+import spotify from "../images/spotify.svg"
+---
+
+<header>
+<a href="https://github.com/matthew-via-music">
+  <img src={github} alt="Github" />
+</a>
+<a href="https://twitter.com/matthewviamusic">
+  <p>Matthew Via Music &copy; <span id='date'></span></p>
+</a>
+<a href="https://open.spotify.com/artist/66OsKKYin7yLMQUsZxjE91">
+  <img src={spotify} alt="Spotify" /> 
+</a>
+</header>
+
+<style>
+  header{
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 99, 132, 0.9);
+    /* color: #aaa; */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 11px;
+  }
+  img{
+    width: 20px;
+    height: 20px;
+  }
+  /* p{
+    margin-top: -2.2px;
+  } */
+</style>
+
+
+<script is:inline>
+
+  const year = new Date().getFullYear()
+  const date = document.getElementById('date')
+  date.append(year)
+
+</script>
