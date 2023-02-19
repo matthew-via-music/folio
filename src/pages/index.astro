@@ -2,20 +2,16 @@
 import Splash from '../components/Splash.astro'
 import Layout from '../layouts/Layout.astro'
 import Carousel from '../components/Carousel.astro'
-
 ---
 
 <Layout title="Matthew Via Music">
 
- 
   <div id="splash">
     <Splash />
   </div>
 
-  
-  
+    
 	<main id="carousel">
-	<!-- <main class="mx-auto px-4"> -->
     <Carousel />
 	</main>
 
@@ -24,10 +20,10 @@ import Carousel from '../components/Carousel.astro'
 
 <style>
 .fade-out{
-  animation: fade_out 0s
+  animation: fade_out .8s
 }
 .fade-in{
-  animation: fade_in 1s
+  animation: fade_in 1.5s
 }
 .remove{
   display: none;
@@ -35,13 +31,10 @@ import Carousel from '../components/Carousel.astro'
 @keyframes fade_out {
      0% {
           opacity: 1;
-          transform: scale(1);
-          /* transform-origin: -100% -100%; */
      }
 
      100% {
           opacity: 0;
-          transform: scale(0)
      }
 }
 @keyframes fade_in {
@@ -60,8 +53,6 @@ import Carousel from '../components/Carousel.astro'
 </style>
 
 <script>
-// let hasSplashed = sessionStorage.getItem("splashDown")
-// if(typeof window !== 'undefined' && !hasSplashed){}
 
 const buttons = document.querySelectorAll('#splash');
 
@@ -72,7 +63,7 @@ buttons.forEach((button) => {
       setTimeout(() => {
         document.getElementById('splash').classList.add('remove')
     }, 300)
-      // sessionStorage.setItem("splashDown", "")
+     
     })
   })
 
@@ -84,7 +75,7 @@ window.addEventListener(
       setTimeout(() => {
         document.getElementById('splash').classList.add('remove')
     }, 300)
-      // sessionStorage.setItem("splashDown", "")
+     
   }
 )
 
