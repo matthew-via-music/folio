@@ -28,7 +28,7 @@ const data = [
     imgxs: "https://easycss.github.io/easyimage/img2.png",
     imgsm: "https://easycss.github.io/easyimage/img2.png",
     imgmd: "https://easycss.github.io/easyimage/img2.png",
-    imglg: "",
+    imglg: "https://easycss.github.io/easyimage/img2.png",
     url: "",
     repoUrl: ""
   },
@@ -39,7 +39,7 @@ const data = [
     imgxs: "https://easycss.github.io/easyimage/img3.png",
     imgsm: "https://easycss.github.io/easyimage/img3.png",
     imgmd: "https://easycss.github.io/easyimage/img3.png",
-    imglg: "",
+    imglg: "https://easycss.github.io/easyimage/img3.png",
     url: "",
     repoUrl: ""
   },
@@ -50,7 +50,7 @@ const data = [
     imgxs: "https://olk1.com/mvm_article_images/tdg.png",
     imgsm: "https://olk1.com/mvm_article_images/tdg.png",
     imgmd: "https://olk1.com/mvm_article_images/tdg.png",
-    imglg: "",
+    imglg: "https://olk1.com/mvm_article_images/tdg.png",
     url: "",
     repoUrl: ""
   },
