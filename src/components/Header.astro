@@ -1,42 +1,30 @@
 ---
+const pathname = new URL(Astro.request.url).pathname
+const currentPath = pathname.slice(1);
 import github from "../images/github.svg"
 import spotify from "../images/spotify.svg"
 ---
 
-<header>
+<header class="relative z-50 w-screen flex justify-center items-center gap-2 py-[10px] text-center text-[11px]">
+
+<div class="w-8">{currentPath === "" ? <a href="/about">About</a> : <a href="/">Home</a>} </div>
+
+
 <a href="https://github.com/matthew-via-music" target="_blank">
-  <img src={github} alt="Github" />
+  <img class="w-[20px] h-auto" src={github} alt="Github" />
 </a>
 <a href="mailto:email@matthew-via-music.com" target="_blank">
   <h1>Matthew Via Music &copy; <span id='date'></span></h1>
 </a>
 <a href="https://open.spotify.com/artist/66OsKKYin7yLMQUsZxjE91" target="_blank">
-  <img src={spotify} alt="Spotify" /> 
+  <img class="w-[20px] h-auto" src={spotify} alt="Spotify" /> 
 </a>
 </header>
 
 <style>
   header{
-    position: relative;
-    z-index: 1000;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
     background: rgba(255, 99, 132, 0.9);
-    /* color: #aaa; */
-    padding: 10px 0;
-    text-align: center;
-    font-size: 11px;
   }
-  img{
-    width: 20px;
-    height: 20px;
-  }
-  /* p{
-    margin-top: -2.2px;
-  } */
 </style>
 
 

@@ -2,19 +2,24 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="About">
-	<main>
-		<!-- <h1 class="text-8xl mt-16">About</h1> -->
-    <a href="/">Home</a>
-	</main>
+<Layout title="About">  
+    
+  <div class="w-screen m-auto flex justify-center items-center h-[350px]">
+    <div class="flex flex-col justify-center items-center">
+      
+      <p class="relative text-[30vw] 2xl:text-[20vw] font-bold text-white w-fit">&#8499;<span class="text-[20vw] 2xl:text-[10vw]">.</span></p>
+      
+
+      <p class="px-16 text-white text-center md:text-2xl leading-tight md:-mt-12 xl:-mt-24 ">Multi-instrumentalist musician and composer.<br/>Full-stack remote developer with 10+ years experience.</p>
+      
+    </div>
+  </div>
+
 </Layout>
 
 
-
 <style>
-main{
-  margin-top: 150px;
-  margin-left: 50px;
+body{
+  background: black;
 }
-  
 </style>

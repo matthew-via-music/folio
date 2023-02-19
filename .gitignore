@@ -20,6 +20,8 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+public/.DS_Store
+public/images/.DS_Store
 .vscode
 DEVREADME.md
 notes.txt

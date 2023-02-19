@@ -51,6 +51,17 @@ const data = [
     imgsm: "https://olk1.com/mvm_article_images/tdg.png",
     imgmd: "https://olk1.com/mvm_article_images/tdg.png",
     imglg: "https://olk1.com/mvm_article_images/tdg.png",
+    url: "https://tdg.olk1.com",
+    repoUrl: ""
+  },
+  {
+    id: 6,
+    cta: "clone the repo here",
+    language: "JS",
+    imgxs: "https://easycss.github.io/easyimage/img4.png",
+    imgsm: "https://easycss.github.io/easyimage/img4.png",
+    imgmd: "https://easycss.github.io/easyimage/img4.png",
+    imglg: "https://easycss.github.io/easyimage/img4.png",
     url: "",
     repoUrl: ""
   },
