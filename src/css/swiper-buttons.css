@@ -1,0 +1,35 @@
+.swiper-button-prev,
+.swiper-button-next {
+  /* z-index: 100; */
+  top: 55%;
+  opacity: .3;
+  background-color: transparent;
+  color: #aee;
+  /* border: 1px solid #aeeeee22; */
+  padding: 1% 0;
+}
+.swiper-button-prev,
+.swiper-button-next span{
+  font-size: 2rem;
+}
+.swiper-button-prev {
+  left: 0%;
+}
+.swiper-button-next {
+  right: 0%;
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: "";
+}
+@media (min-width: 768px){
+  .swiper-button-prev, 
+  .swiper-button-next {
+    top: 45%;
+  }
+  .swiper-button-prev{
+    left: 2%;
+  } 
+  .swiper-button-next{
+    right: 2%;
+  }
+}

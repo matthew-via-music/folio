@@ -1,27 +1,21 @@
-import { A11y, Keyboard, Autoplay } from "swiper"
+import { A11y, Keyboard } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
+// import SwiperButtons from "./SwiperButtons"
 import data from '../data'
-
 import "swiper/css"
-import "swiper/css/navigation"
-// import "swiper/css/pagination"
-// import "swiper/css/scrollbar"
-import "../css/carousel.css"
 
 export default function Carousel() {
   
   return (
-    <div className="swiper-outer">
+    <div>
     <Swiper
       // direction={"vertical"}
       tag="section"
       wrapperTag="ul"
-      modules={[A11y, Keyboard, Autoplay]}
+      modules={[A11y, Keyboard]}
       slidesPerView={1}
       keyboard
       loop
-      // autoplay
-      // navigation
     >
       <div>
         {data.map((obj) => (
@@ -30,25 +24,52 @@ export default function Carousel() {
             // style={{ width: "100vw", height: "95vh" }}
             key={obj.id}
           >
-          
-          <div className="visit"><a href={obj.url} target="_blank"><span>Visit Site</span></a></div>
-          
-          <div className="layout">
-            <a href={obj.repoUrl} target="_blank">
-              <p className="z-10 absolute border-t-[2px] border-[#ffcd56] w-fit text-center mx-16 mt-6 text-[10px] text-[#c9cbcf] p-2">&rarr;{obj.cta}&larr;</p>
-              <p className="z-10 absolute bg-[#ffcd56] w-fit text-center mx-12 text-[12px] text-black p-1 mt-1">{obj.language}</p>
-            </a>
+        
+        {/* VISIT SITE */}
+        <div className="absolute z-20 m-auto top-[20px] right-[20px] font-mono flex flex-col text-center">
+          <a href={obj.url} target="_blank">
+            <p className="rotate-[-6deg] bg-[#f33] -mb-1 -ml-2 py-1 text-md text-white">Visit Site</p>
+            <p className="bg-[#bf4] px-1 pb-0 text-sm text-black">click <span className="text-2xl leading-tight">&uarr;</span> here</p>
+          </a>
+        </div>
 
-            <img className="z-2 slide-img" src={obj.img} alt="Matthew Via Music" />
+      {/* LANGUAGE + REPO LINK */}
+      <div>
+        <a href={obj.repoUrl} target="_blank">
+          <p className="z-20 absolute bg-[#f7f71d] w-fit text-center text-[12px] font-bold text-black p-2 top-4 left-8 mr-2">{obj.language}</p>
+          <p className="rotate-[-3deg] z-10 absolute bg-[#f7f71d] w-fit text-center top-14 left-2 text-black leading-tight text-[11px] p-1">&rarr;{obj.cta}&larr;</p>
+        </a>
 
-          </div>
+      {/* IMAGE SLIDES */}
+      <picture>
+        <source
+          media="(max-width: 599px)"
+          srcSet={`${obj.imgxs} 599w`}
+          sizes="599px"
+        />
+        <source
+          media="(max-width: 999px)"
+          srcSet={`${obj.imgsm} 999w`}
+          sizes="999px"
+        />
+        <source
+          media="(min-width: 1599px)"
+          srcSet={`${obj.imglg} 1599w`}
+          sizes="1599px"
+        />
+        <img className="z-2 opacity-[0.85] w-screen h-screen object-cover object-position-[30%, 110%]" src={obj.imgmd} />
+      </picture>
+
+        </div>{/* */}
           </SwiperSlide>
         ))}
       </div>
     </Swiper>
 
-    <div onClick={() => alert("Swipe left and right or use keyboard arrows")} className="swiper-button-prev"><span>&larr;</span></div>
-    <div onClick={() => alert("Swipe left and right or use keyboard arrows")} className="swiper-button-next"><span>&rarr;</span></div> 
+   
+      {/* <SwiperButtons /> */}
+   
+
     </div>
   )
 }
