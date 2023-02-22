@@ -2,15 +2,15 @@
 import Splash from '../components/Splash.astro'
 import Layout from '../layouts/Layout.astro'
 import Carousel from '../components/Carousel.astro'
+
 ---
 
 <Layout title="Matthew Via Music">
 
-  <div id="splash">
-    <Splash />
-  </div>
 
-    
+  <div id="splash"> <Splash /> </div> 
+
+
 	<main id="carousel">
     <Carousel />
 	</main>
@@ -52,9 +52,10 @@ import Carousel from '../components/Carousel.astro'
 
 </style>
 
+
 <script>
 
-const buttons = document.querySelectorAll('#splash');
+const buttons = document.querySelectorAll('#splash')
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -63,7 +64,8 @@ buttons.forEach((button) => {
       setTimeout(() => {
         document.getElementById('splash').classList.add('remove')
     }, 300)
-     
+    // sessionStorage.setItem('session', JSON.stringify("Splashed"))     
+    // console.log(sessionStorage.getItem('session'))
     })
   })
 
@@ -75,8 +77,19 @@ window.addEventListener(
       setTimeout(() => {
         document.getElementById('splash').classList.add('remove')
     }, 300)
-     
+    // sessionStorage.setItem('session', JSON.stringify("Splashed"))
+    // console.log(sessionStorage.getItem('session'))
   }
 )
-
 </script>
+
+<!-- 
+
+<script>
+
+const array = ['splash', 'hasHappened']
+sessionStorage.setItem('splashed', JSON.stringify(array))
+
+JSON.parse(sessionStorage.getItem('session'))
+
+</script> -->
