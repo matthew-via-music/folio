@@ -7,24 +7,46 @@ import spotify from "../images/spotify.svg"
 
 <header class="relative z-50 w-screen flex justify-center items-center gap-2 py-[10px] text-center text-[11px]">
 
-<div class="w-8">{currentPath === "" ? <a href="/about">About</a> : <a href="/">Home</a>} </div>
+<a href="/"><img class="absolute left-1 top-1 rounded w-8 h-8" src="favicon/favicon-32x32.png" alt="MVM" /></a>
 
+<div class="w-8">{currentPath === "" ? <a href="/about">About</a> : <a href="/">Home</a>} </div>
 
 <a href="https://github.com/matthew-via-music" target="_blank">
   <img class="w-[20px] h-auto" src={github} alt="Github" />
 </a>
+
 <a href="mailto:email@matthew-via-music.com" target="_blank">
   <h1>Matthew Via Music &copy; <span id='date'></span></h1>
 </a>
+
 <a href="https://open.spotify.com/artist/66OsKKYin7yLMQUsZxjE91" target="_blank">
   <img class="w-[20px] h-auto" src={spotify} alt="Spotify" /> 
 </a>
+
+<a href="https://org.olk1.com/" target="_blank"><img class="absolute right-1 top-1 rounded w-8 h-8" src="https://avatars.githubusercontent.com/u/103645784?v=4" alt="MVM" /></a>
 </header>
 
 <style>
-  header{
-    background: rgba(255, 99, 132, 0.9);
-  }
+header{
+  background: var(--red);
+background: linear-gradient(90deg, var(--grey) 40%, var(--red) 50%, var(--darkBlue) 100%); 
+  animation: gradient 60s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* background: rgba(255, 99, 132, 0.9); */
 </style>
 
 

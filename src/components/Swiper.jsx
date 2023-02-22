@@ -28,16 +28,16 @@ export default function Carousel() {
         {/* VISIT SITE */}
         <div className="absolute z-20 m-auto top-[20px] right-[20px] font-mono flex flex-col text-center">
           <a href={obj.url} target="_blank">
-            <p className="rotate-[-6deg] bg-[#f33] -mb-1 -ml-2 py-1 text-md text-white">Visit Site</p>
-            <p className="bg-[#bf4] px-1 pb-0 text-sm text-black">click <span className="text-2xl leading-tight">&uarr;</span> here</p>
+            <p className="red rotate-[-6deg] -mb-1 -ml-2 py-1 text-md text-white">Visit Site</p>
+            <p className="darkGreen px-1 pb-0 text-sm text-black">click <span className="text-2xl leading-tight">&uarr;</span> here</p>
           </a>
         </div>
 
       {/* LANGUAGE + REPO LINK */}
       <div>
         <a href={obj.repoUrl} target="_blank">
-          <p className="z-20 absolute bg-[#f7f71d] w-fit text-center text-[12px] font-bold text-black p-2 top-4 left-8 mr-2">{obj.language}</p>
-          <p className="rotate-[-3deg] z-10 absolute bg-[#f7f71d] w-fit text-center top-14 left-2 text-black leading-tight text-[11px] p-1">&rarr;{obj.cta}&larr;</p>
+          <p className="lightBlue z-20 absolute w-fit text-center text-[12px] font-bold text-black p-2 top-4 left-8 mr-2">{obj.language}</p>
+          <p className="yellow rotate-[-3deg] z-10 absolute w-fit text-center top-14 left-2 text-black leading-tight text-[11px] p-1">&rarr;{obj.cta}&larr;</p>
         </a>
 
       {/* IMAGE SLIDES */}

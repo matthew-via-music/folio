@@ -20,8 +20,15 @@ const { title } = Astro.props;
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
     <link rel='shortcut icon' href='favicon/favicon.ico' type='image/x-icon' />
-    <link rel="manifest" href="/site.webmanifest" />
-
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    
+    <!-- <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@matthewviamusic">
+    <meta name="twitter:creator" content="@matthewviamusic">
+    <meta name="twitter:title" content="Newly released creative media content">
+    <meta name="twitter:description" content="Listeners delighted in hearing the interesting and original sounds. The mood was high and the ambience was forever memorable.">
+    <meta name="twitter:image" content="https://matthewviamusic.com/images/docsimages/styleguide/3.png">
+    <meta name="twitter:image:alt" content="A collage of album covers from the catalogue of released musical recordings."> -->
 		<title>{title}</title>
 	</head>
 	<body>
@@ -31,6 +38,46 @@ const { title } = Astro.props;
 </html>
 
 <style is:global>
+:root{
+  /* palette 1 */
+  --yellow: #FCFC99;
+  --lightBlue: #A8E4EF;
+  --darkBlue: #CBF6F8;
+  --darkGreen: #0CC078;
+  /* --lightGreen: #79DE79; */
+  /* --red: #FB6962; */
+/* palette 2 */
+  --red: #e64747;
+  --lightGreen: #8fb935;
+  --grey: #d3d3d3;
+  /* --yellow: #e6e22e; */
+  --orange: #e09c3b;
+}
+.red{
+  background: var(--red);
+}
+.yellow{
+  background: var(--yellow);
+}
+.lightGreen{
+  background: var(--lightGreen);
+}
+.darkGreen{
+  background: var(--darkGreen);
+}
+.lightBlue{
+  background: var(--lightBlue);
+}
+.darkBlue{
+  background: var(--darkBlue);
+}
+.orange{
+  background: var(--orange);
+}
+.grey{
+  background: var(--grey);
+}
+
   html, body {
     overflow: hidden;
     overscroll-behavior-y: none;
