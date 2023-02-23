@@ -1,0 +1,48 @@
+---
+
+---
+
+  <a target="_blank"><img class="ease-linear transition-all duration-850 absolute right-1 top-1 rounded w-8 h-8" src="https://avatars.githubusercontent.com/u/103645784?v=4" alt="MVM" onclick="toggleModal('modal-id')"/></a>
+
+
+<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
+  
+  <div class="modal-content relative w-auto my-6 mx-auto max-w-3xl">
+    <!--content-->
+  
+    <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+      <!--body-->
+      
+      <div onclick="toggleModal('modal-id')" class="modal-content relative p-6 flex-auto">
+        <img src="https://avatars.githubusercontent.com/u/103645784?v=4" alt="MVM">
+      </div>
+
+    </div><!--\body-->
+
+  </div><!--\content-->
+
+</div>
+
+  <div class="hidden opacity-25 fixed inset-0 z-40" id="modal-id-backdrop"><!-- Modal bg --></div>
+
+<style>
+/* Animation - fade in the Modal */
+.modal-content {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+</style>
+
+<script is:inline>
+  function toggleModal(modalID){
+    document.getElementById(modalID).classList.toggle("hidden");
+    document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+    document.getElementById(modalID).classList.toggle("flex");
+    document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+  }
+</script>
