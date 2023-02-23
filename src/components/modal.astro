@@ -2,28 +2,34 @@
 
 ---
 
-  <a target="_blank"><img class="ease-linear transition-all duration-850 absolute right-1 top-1 rounded w-8 h-8" src="https://avatars.githubusercontent.com/u/103645784?v=4" alt="MVM" onclick="toggleModal('modal-id')"/></a>
+  <a><img class="z-50 ease-linear transition-all duration-850 absolute right-1 top-1 rounded w-8 h-8" src="https://avatars.githubusercontent.com/u/103645784?v=4" alt="MVM" onclick="toggleModal('modal-id')" /></a>
 
 
-<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center" id="modal-id">
+<div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-40 outline-none focus:outline-none justify-center items-center" id="modal-id">
   
   <div class="modal-content relative w-auto my-6 mx-auto max-w-3xl">
     <!--content-->
-  
+    
     <div class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
       <!--body-->
       
+    <!-- X to close -->
+    <!-- <button class="absolute top-1 right-3 outline-none focus:outline-none" onclick="toggleModal('modal-id')">
+      
+        <a class="text-gray-400 text-md block outline-none focus:outline-none">X</a>
+      
+    </button> -->
+
       <div onclick="toggleModal('modal-id')" class="modal-content relative p-6 flex-auto">
         <img src="https://avatars.githubusercontent.com/u/103645784?v=4" alt="MVM">
       </div>
-
     </div><!--\body-->
 
   </div><!--\content-->
 
 </div>
 
-  <div class="hidden opacity-25 fixed inset-0 z-40" id="modal-id-backdrop"><!-- Modal bg --></div>
+  <div class="hidden opacity-25 fixed inset-0 z-40" id="modal-id-backdrop" onclick="toggleModal('modal-id')"><!-- Modal bg --></div>
 
 <style>
 /* Animation - fade in the Modal */
