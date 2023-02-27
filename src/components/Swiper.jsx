@@ -57,7 +57,7 @@ export default function Carousel() {
           srcSet={`${obj.imglg} 1599w`}
           sizes="1599px"
         />
-        <img className="z-2 opacity-[0.85] w-screen h-screen object-cover object-position-[30%, 110%]" src={obj.imgmd} />
+        <img className="z-2 saturate-50 w-screen h-screen object-cover object-position-[30%, 110%]" src={obj.imgmd} />
       </picture>
 
         </div>{/* */}
