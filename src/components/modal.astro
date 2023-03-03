@@ -1,6 +1,7 @@
 ---
 
 ---
+<div>
 
   <a><img class="z-50 ease-linear transition-all duration-850 absolute right-1 top-1 rounded w-8 h-8" src="https://avatars.githubusercontent.com/u/103645784?v=4" alt="MVM" onclick="toggleModal('modal-id')" /></a>
 
@@ -31,6 +32,8 @@
 
   <div class="hidden opacity-25 fixed inset-0 z-40" id="modal-id-backdrop" onclick="toggleModal('modal-id')"><!-- Modal bg --></div>
 
+</div>
+
 <style>
 /* Animation - fade in the Modal */
 .modal-content {
@@ -44,7 +47,7 @@
 }
 </style>
 
-<script>
+<script is:inline>
   function toggleModal(modalID){
     document.getElementById(modalID).classList.toggle("hidden");
     document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
