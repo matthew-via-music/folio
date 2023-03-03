@@ -18,8 +18,8 @@ const data = [
     imgsm: "/images/tdg/tdg-slide-sm.webp",
     imgmd: "/images/tdg/tdg-slide-md.webp",
     imglg: "/images/tdg/tdg-slide-lg.webp",
-    url: "https://tdg.olk1.com",
-    repoUrl: "https://github.com/matthew-via-music/tdg"
+    url: "https://the-development-group.github.io/",
+    repoUrl: "https://github.com/the-development-group"
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ const data = [
     imgsm: "/images/dab/dab-slide-sm.webp",
     imgmd: "/images/dab/dab-slide-md.webp",
     imglg: "/images/dab/dab-slide-lg.webp",
-    url: "https://dab.olk1.com",
-    repoUrl: "https://github.com/matthew-via-music/dabdabtoot"
+    url: "https://dabdabtoot.github.io/",
+    repoUrl: "https://github.com/dabdabtoot"
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const data = [
     imgsm: "/images/pillpopper/pillpopper-slide-sm.webp",
     imgmd: "/images/pillpopper/pillpopper-slide-md.webp",
     imglg: "/images/pillpopper/pillpopper-slide-lg.webp",
-    url: "https://pillpopper.olk1.com/",
+    url: "https://pillpopper.github.io/",
     repoUrl: "https://github.com/PillPopper"
   },
   {
